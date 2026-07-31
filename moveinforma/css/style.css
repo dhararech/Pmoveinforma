@@ -1,0 +1,277 @@
+/* ==========================================================================
+   Move Informa — Design System
+   Paleta e tipografia centralizadas para todas as páginas do projeto.
+   ========================================================================== */
+
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: #221B33;
+  background-color: #FAF8FF;
+  background-image:
+    radial-gradient(circle at 8% 8%, rgba(124, 58, 237, 0.08), transparent 40%),
+    radial-gradient(circle at 92% 18%, rgba(34, 211, 211, 0.10), transparent 38%);
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+  font-family: "Fredoka", "Segoe UI", sans-serif;
+  font-weight: 600;
+}
+
+a {
+  color: #7C3AED;
+}
+
+/* ---------- Navbar ---------- */
+.move-navbar {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #E7E1F5;
+  padding-top: .65rem;
+  padding-bottom: .65rem;
+}
+
+.move-navbar .navbar-brand {
+  font-size: 1.4rem;
+  color: #221B33;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.move-navbar .navbar-brand .dot {
+  width: .55rem;
+  height: .55rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7C3AED, #22D3D3);
+  display: inline-block;
+}
+
+.move-navbar .nav-link {
+  font-weight: 500;
+  color: #6B6478 !important;
+  border-radius: 999px;
+  padding: .5rem 1rem !important;
+  margin: 0 .15rem;
+  transition: background-color .15s ease, color .15s ease;
+}
+
+.move-navbar .nav-link:hover {
+  background-color: rgba(124, 58, 237, 0.08);
+  color: #7C3AED !important;
+}
+
+.move-navbar .nav-link.active {
+  background-color: #7C3AED;
+  color: #fff !important;
+}
+
+.move-navbar .btn-search {
+  border-radius: 999px;
+  border: 1px solid #E7E1F5;
+}
+
+/* ---------- Botões ---------- */
+.btn-move-primary {
+  background: linear-gradient(135deg, #7C3AED, #5B21B6);
+  border: none;
+  color: #fff;
+  border-radius: 999px;
+  padding: .55rem 1.4rem;
+  font-weight: 600;
+  box-shadow: 0 4px 14px -6px rgba(34, 27, 51, 0.15);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.btn-move-primary:hover {
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px -12px rgba(124, 58, 237, 0.25);
+}
+
+.btn-move-outline {
+  border-radius: 999px;
+  border: 1.5px solid #E7E1F5;
+  background: #fff;
+  color: #221B33;
+  font-weight: 500;
+  padding: .5rem 1.3rem;
+  transition: border-color .15s ease, color .15s ease, background-color .15s ease;
+}
+
+.btn-move-outline:hover,
+.btn-move-outline.active {
+  border-color: #7C3AED;
+  color: #7C3AED;
+  background: rgba(124, 58, 237, 0.06);
+}
+
+.btn-move-ghost {
+  border-radius: 999px;
+  border: 1.5px solid #E7E1F5;
+  background: #fff;
+  color: #6B6478;
+  font-weight: 500;
+  padding: .4rem 1.1rem;
+}
+
+.btn-move-ghost:hover {
+  border-color: #DB4FA0;
+  color: #DB4FA0;
+}
+
+/* ---------- Hero ---------- */
+.move-hero {
+  padding: 3.5rem 0 2.5rem;
+}
+
+.move-hero .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .75rem;
+  font-weight: 700;
+  color: #7C3AED;
+}
+
+.move-hero h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1.15;
+}
+
+.move-hero p.lead {
+  color: #6B6478;
+  max-width: 46ch;
+}
+
+/* ---------- Carousel ---------- */
+.move-carousel {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -12px rgba(124, 58, 237, 0.25);
+}
+
+.move-carousel .carousel-item img {
+  height: 340px;
+  object-fit: cover;
+  filter: saturate(1.05);
+}
+
+.move-carousel .carousel-caption {
+  text-align: left;
+  left: 1.5rem;
+  right: 1.5rem;
+  bottom: 1.25rem;
+  background: linear-gradient(0deg, rgba(34,27,51,.75), transparent 130%);
+  border-radius: 10px;
+  padding: 1rem 1.25rem .25rem;
+}
+
+/* ---------- Cards ---------- */
+.move-card {
+  background: #FFFFFF;
+  border: 1px solid #E7E1F5;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px -6px rgba(34, 27, 51, 0.15);
+  transition: transform .18s ease, box-shadow .18s ease;
+  height: 100%;
+}
+
+.move-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px -12px rgba(124, 58, 237, 0.25);
+}
+
+.move-card .icon-badge {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(124, 58, 237, 0.10);
+  margin-bottom: .75rem;
+}
+
+.move-card .icon-badge img {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.badge-category {
+  font-weight: 600;
+  font-size: .7rem;
+  letter-spacing: .03em;
+  border-radius: 999px;
+  padding: .35em .75em;
+}
+
+.badge-ti       { background: rgba(124, 58, 237, .12); color: #5B21B6; }
+.badge-industria{ background: rgba(219, 79, 160, .12); color: #DB4FA0; }
+.badge-saude    { background: rgba(34, 211, 211, .15); color: #0E8E8E; }
+.badge-educacao { background: rgba(245, 158, 11, .15); color: #B45309; }
+
+/* ---------- Seções ---------- */
+.section-title {
+  font-size: 1.6rem;
+  margin-bottom: .25rem;
+}
+
+.section-subtitle {
+  color: #6B6478;
+  margin-bottom: 2rem;
+}
+
+.section-badge-soon {
+  font-size: .75rem;
+  background: rgba(34, 27, 51, .06);
+  color: #6B6478;
+  border-radius: 999px;
+  padding: .3em .8em;
+}
+
+/* ---------- Filtros (Glossário / Offline / Favoritos) ---------- */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin: 1.5rem 0 2rem;
+}
+
+/* ---------- Empty state ---------- */
+.move-empty {
+  border: 1.5px dashed #E7E1F5;
+  border-radius: 16px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  color: #6B6478;
+}
+
+/* ---------- Footer ---------- */
+.move-footer {
+  border-top: 1px solid #E7E1F5;
+  margin-top: 4rem;
+  padding: 1.75rem 0;
+  color: #6B6478;
+  font-size: .875rem;
+}
+
+/* ---------- Botão fechar/voltar flutuante ---------- */
+.btn-float-close {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 1030;
+}
+
+/* ---------- Utilidades ---------- */
+.container-page {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 576px) {
+  .move-carousel .carousel-item img {
+    height: 220px;
+  }
+}
