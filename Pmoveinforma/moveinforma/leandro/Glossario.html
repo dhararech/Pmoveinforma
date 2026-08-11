@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Move Informa — Glossário</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="../css/style.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg move-navbar sticky-top">
+    <div class="container-page d-flex flex-wrap">
+      <a class="navbar-brand" href="../pietro/pagInicial.html"><span class="dot"></span>Move Informa</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMove" aria-controls="navbarMove" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMove">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="../pietro/pagInicial.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="Glossario.html">Glossário</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Mapa</a></li>
+          <li class="nav-item"><a class="nav-link" href="../gabi/favoritos.html">Favoritos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pedro/offline.html">Offline</a></li>
+        </ul>
+        <form class="d-flex" role="search" onsubmit="return false;">
+          <input class="form-control me-2 btn-search" type="search" placeholder="Buscar um termo" aria-label="Buscar" data-search-input>
+          <button class="btn btn-move-primary" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container-page py-4">
+    <h1 class="section-title">Glossário</h1>
+    <p class="section-subtitle">Termos técnicos explicados em linguagem simples. Filtre por área ou use a busca no topo.</p>
+
+    <div class="filter-bar">
+      <button type="button" class="btn btn-move-outline active" data-filter="todos">Todos</button>
+      <button type="button" class="btn btn-move-outline" data-filter="ti">TI</button>
+      <button type="button" class="btn btn-move-outline" data-filter="industria">Indústria</button>
+      <button type="button" class="btn btn-move-outline" data-filter="saude">Saúde</button>
+      <button type="button" class="btn btn-move-outline" data-filter="educacao">Educação</button>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4" data-category="ti" data-search-item>
+        <div class="move-card p-4">
+          <span class="badge-category badge-ti">TI</span>
+          <h5 class="card-title mt-3">API</h5>
+          <p class="card-text text-muted small">Conjunto de regras que permite que dois sistemas troquem informações entre si.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-category="ti" data-search-item>
+        <div class="move-card p-4">
+          <span class="badge-category badge-ti">TI</span>
+          <h5 class="card-title mt-3">Nuvem (Cloud)</h5>
+          <p class="card-text text-muted small">Servidores acessados pela internet, usados para guardar dados e rodar programas sem instalar nada localmente.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-category="ti" data-search-item>
+        <div class="move-card p-4">
+          <span class="badge-category badge-ti">TI</span>
+          <h5 class="card-title mt-3">Banco de dados</h5>
+          <p class="card-text text-muted small">Sistema organizado para guardar, buscar e atualizar informações de forma estruturada.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-category="industria" data-search-item>
+        <div class="move-card p-4">
+          <span class="badge-category badge-industria">Indústria</span>
+          <h5 class="card-title mt-3">Automação</h5>
+          <p class="card-text text-muted small">Uso de máquinas e sistemas para executar tarefas antes feitas manualmente, com menos intervenção humana.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-category="industria" data-search-item>
+        <div class="move-card p-4">
+          <span class="badge-category badge-industria">Indústria</span>
+          <h5 class="card-title mt-3">Manutenção preditiva</h5>
+          <p class="card-text text-muted small">Uso de dados de sensores para prever falhas em equipamentos antes que elas aconteçam.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-category="saude" data-search-item>
+        <div class="move-card p-4">
+          <span class="badge-category badge-saude">Saúde</span>
+          <h5 class="card-title mt-3">Prontuário eletrônico</h5>
+          <p class="card-text text-muted small">Versão digital do histórico médico do paciente, acessível pela equipe de saúde de forma segura.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-category="saude" data-search-item>
+        <div class="move-card p-4">
+          <span class="badge-category badge-saude">Saúde</span>
+          <h5 class="card-title mt-3">Telemedicina</h5>
+          <p class="card-text text-muted small">Atendimento médico realizado à distância, por vídeo ou mensagem, usando a internet.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-category="educacao" data-search-item>
+        <div class="move-card p-4">
+          <span class="badge-category badge-educacao">Educação</span>
+          <h5 class="card-title mt-3">Ensino híbrido</h5>
+          <p class="card-text text-muted small">Modelo que combina aulas presenciais e atividades online no mesmo curso.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-category="educacao" data-search-item>
+        <div class="move-card p-4">
+          <span class="badge-category badge-educacao">Educação</span>
+          <h5 class="card-title mt-3">Acessibilidade</h5>
+          <p class="card-text text-muted small">Conjunto de práticas que garantem que qualquer pessoa consiga usar e entender um conteúdo, produto ou espaço.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="move-empty mt-4" data-empty-state style="display:none;">
+      Nenhum termo encontrado para esse filtro.
+    </div>
+  </main>
+
+  <footer class="move-footer">
+    <div class="container-page d-flex flex-wrap justify-content-between gap-2">
+      <span>© 2026 Move Informa</span>
+      <span>Desenvolvido por Senac RS Caxias do Sul - Todos os direitos reservados</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

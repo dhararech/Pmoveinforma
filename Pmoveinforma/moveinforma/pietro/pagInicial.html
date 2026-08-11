@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Move Informa — Início</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="../css/style.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg move-navbar sticky-top">
+    <div class="container-page d-flex flex-wrap">
+      <a class="navbar-brand" href="pagInicial.html"><span class="dot"></span>Move Informa</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMove" aria-controls="navbarMove" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMove">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="pagInicial.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="../leandro/Glossario.html">Glossário</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Mapa</a></li>
+          <li class="nav-item"><a class="nav-link" href="../gabi/favoritos.html">Favoritos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pedro/offline.html">Offline</a></li>
+        </ul>
+        <form class="d-flex" role="search" onsubmit="return false;">
+          <input class="form-control me-2 btn-search" type="search" placeholder="Buscar um termo" aria-label="Buscar">
+          <button class="btn btn-move-primary" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="move-hero">
+    <div class="container-page">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5">
+          <p class="eyebrow">Tecnologia acessível em Libras</p>
+          <h1>Termos de TI explicados em Libras, no seu ritmo.</h1>
+          <p class="lead mt-3">O Move Informa reúne glossário, mapa de conteúdos, favoritos e modo offline
+            para apoiar o aprendizado de vocabulário técnico da área de tecnologia por pessoas surdas.</p>
+          <div class="d-flex flex-wrap gap-2 mt-4">
+            <a href="../leandro/Glossario.html" class="btn btn-move-primary">Explorar o glossário</a>
+            <a href="../pedro/offline.html" class="btn btn-move-outline">Ver conteúdo offline</a>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div id="carouselNoticias" class="carousel slide move-carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselNoticias" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselNoticias" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselNoticias" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1200&auto=format&fit=crop" class="d-block w-100" alt="Pessoas colaborando em um projeto de tecnologia">
+                <div class="carousel-caption">
+                  <h5>Turma piloto de TI em Libras</h5>
+                  <p class="mb-0">Em parceria com o Senac, conteúdo técnico totalmente traduzido.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop" class="d-block w-100" alt="Pessoa estudando com notebook">
+                <div class="carousel-caption">
+                  <h5>Novos termos toda semana</h5>
+                  <p class="mb-0">O glossário é atualizado com vocabulário de TI, indústria e saúde.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1200&auto=format&fit=crop" class="d-block w-100" alt="Mãos em conversa de Libras">
+                <div class="carousel-caption">
+                  <h5>Salve seus favoritos</h5>
+                  <p class="mb-0">Marque os termos importantes e acesse tudo, mesmo sem internet.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselNoticias" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselNoticias" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Próximo</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Atalhos principais -->
+  <main class="container-page py-4">
+    <h2 class="section-title">O que você quer fazer agora?</h2>
+    <p class="section-subtitle">Acesse rapidamente as áreas do Move Informa.</p>
+
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3">
+        <a href="../leandro/Glossario.html" class="text-decoration-none text-reset">
+          <div class="move-card p-4">
+            <div class="icon-badge"><img src="https://cdn-icons-png.flaticon.com/128/10446/10446347.png" alt=""></div>
+            <h5 class="card-title">Glossário</h5>
+            <p class="card-text text-muted small mb-0">Termos de tecnologia explicados de forma simples, com filtro por categoria.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="move-card p-4 position-relative">
+          <span class="section-badge-soon position-absolute top-0 end-0 m-3">em breve</span>
+          <div class="icon-badge"><img src="https://cdn-icons-png.flaticon.com/128/535/535188.png" alt=""></div>
+          <h5 class="card-title">Mapa</h5>
+          <p class="card-text text-muted small mb-0">Trilha visual de aprendizado por área de conhecimento.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <a href="../gabi/favoritos.html" class="text-decoration-none text-reset">
+          <div class="move-card p-4">
+            <div class="icon-badge"><img src="https://cdn-icons-png.flaticon.com/128/3039/3039491.png" alt=""></div>
+            <h5 class="card-title">Favoritos</h5>
+            <p class="card-text text-muted small mb-0">Os termos e conteúdos que você salvou para revisar depois.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <a href="../pedro/offline.html" class="text-decoration-none text-reset">
+          <div class="move-card p-4">
+            <div class="icon-badge"><img src="https://cdn-icons-png.flaticon.com/128/9131/9131795.png" alt=""></div>
+            <h5 class="card-title">Offline</h5>
+            <p class="card-text text-muted small mb-0">Conteúdo salvo no dispositivo, disponível sem internet.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="move-footer">
+    <div class="container-page d-flex flex-wrap justify-content-between gap-2">
+      <span>© 2026 Move Informa</span>
+      <span>Desenvolvido por Senac RS Caxias do Sul - Todos os direitos reservados</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
