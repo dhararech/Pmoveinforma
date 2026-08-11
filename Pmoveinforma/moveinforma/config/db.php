@@ -2,7 +2,7 @@
 $host = 'localhost';
 $dbname = 'moveinforma'; // nome do banco de dados
 $user = 'root'; // usuário do bd criado automaticamente pelo XAMPP
-$senha = '' ;//senha vazia no localhost
+$senha = ''; //senha vazia no localhost
 try{
     $pdo = new PDO(
         "mysql:host={$host}; dbname={$dbname};charset=utf8mb4",
@@ -17,8 +17,7 @@ try{
             PDO::ATTR_EMULATE_PREPARES => false,
         ]
         );
-}catch (PDOException $e) {
-    // Trata erros de conexão sem expor senhas no ambiente
+}catch(PDOException $e){
     die("Erro na conexão com o banco de dados: " . $e->getMessage());
 }
 ?>
