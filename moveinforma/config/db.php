@@ -17,4 +17,5 @@ try{
             PDO::ATTR_EMULATE_PREPARES => false,
         ]
         );
-}
+}catch(PDOexception $e)
+    die('Erro ao conectar ao banco de dados. Verifique as configurações em: config/db.php')
