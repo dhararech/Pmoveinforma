@@ -25,7 +25,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
       $_SESSION['admin_id']   = $admin['id'];
       $_SESSION['admin_nome'] = $admin['nome'];
 
-      header('Local: painel.php');
+      header('Location: painel.php');
       exit;
     }
     $erro = "E-mail ou senha incorretos";
@@ -236,7 +236,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         <h1 class="h3 mb-1">Entrar na sua conta</h1>
         <p class="text-muted mb-4">Acesse o Move Informa com seu e-mail e senha.</p>
 
-        <form method="post" onsubmit="return false;" novalidate>
+        <form method="post" novalidate>
           <div class="mb-3">
             <label for="email" class="form-label">E-mail</label>
             <input type="email" class="form-control" id="email" name="email" placeholder="seuemail@exemplo.com" required autocomplete="username" value="<?= htmlspecialchars($_POST['email'] ?? '') ?>">
