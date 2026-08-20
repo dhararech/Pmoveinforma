@@ -1,0 +1,79 @@
+<?php
+session_start();
+if (empty($_SESSION['admin_id'])) {
+    header('Location: login.php');
+    exit;
+}
+require __DIR__ . '/../config/db.php';
+
+$categorias = ["ti" => "TI", "industria" => "Indústria", "saude" => "Saúde", "educacao" => "Educação"];
+
+//cadastrar
+if ($_SERVER['REQUEST_METHOD'] === 'post') {
+    $termo = trim($_POST['termo'] ?? '');
+    $definicao = trim($_POST['definicao'] ?? '');
+    $categoria = trim($_POST['categoria'] ?? '');
+    $disponivelOffline = trim($_POST['disponivelOffline'] ?? '') ? 1 : 0;
+    if ($termo === '' || $definicao === '' || !array_key_exists($categoria, $categorias)) {
+        $erro = "Preencha o termo, a definição e escolha uma categoria válida";
+    } else {
+        $stmt = $pdo->prepare(
+            'INSERT INTO termos_glossario (termo, definicao, categoria, disponivelOffline) VALUES (?, ?, ?, ?)'
+        );
+        $stmt->execute([$termo, $definicao, $categoria, $disponivelOffline]);
+        header('Location: glossario.php');
+        exit;
+    }
+}
+
+//listar
+$stmt = $pdo->query('SELECT * FROM termos_glossario ORDER BY id DESC');
+$termos = $stmt->fetchAll();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Informa - Admin - Glossário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg move-navbar sticky-top">
+        <div class="container-page d-flex justify-content-between align-items-center">
+            <span class="navbar-brand mb-0"><img src="../assets/logo.svg" alt="" class="brand-logo">Move Informa -
+                Admin</span>
+            <div class="d-flex align-items-center gap-3">
+                <a href="painel.php" class="link-muted text-decoration-none small"><- Painel</a>
+
+                        <a href="logout.php" class="btn btn-move-ghost btn-sm">Sair</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container-page py-4">
+        <h1 class="section-title">Glossário</h1>
+        <p class="section-subtitle">Cadastre novos termos e gerencie os já existentes.</p>
+
+        <?php if ($erro): ?>
+            <div class="alert alert-danger py-2 small"><?= htmlspecialchars($erro) ?></div>
+        <?php endif; ?>
+        <!--Formulário de cadastro-->
+        <div class="move-card p-4 mb-5">
+            <h5 class="mb-3">Novo termo</h5>
+            <form method="post">
+                <div class="mb-3">
+                    <label class="form-label">Termo</label>
+                    <input type="text" name="termo" class="form-control" require>
+                </div>
+            </form>
+
+        </div>
+    </main>
+</body>
+
+</html>
