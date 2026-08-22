@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mapa de Acessibilidade</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Leaflet -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <style>
+
+        #map {
+            width: 540px;
+            height: 400px;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Mapa de acessibilidade</h1>
+
+    <button type="button" class="btn btn-danger">X</button>
+
+    <br><br>
+
+    <!-- MAPA -->
+    <div id="map"></div>
+
+
+    <!-- SENAC -->
+    <div class="card mb-3" style="max-width: 540px;">
+
+        <div class="row g-0">
+
+            <div class="col-md-4">
+
+              <span style="
+                    display: inline-block;
+                    width: 150px;
+                    height: 150px;
+                    background-color: rgb(228, 31, 146);
+                    border-radius: 50%;
+                    margin: 10px;">
+                </span>
+
+            </div>
+
+            <div class="col-md-8">
+
+                <div class="card-body">
+
+                    <h2 class="card-title">
+                        Senac Unidade Centro
+                    </h2>
+
+                    <p class="card-text">
+                        Escola · Atendimento em Libras
+                    </p>
+
+                    <p class="card-text">
+                        <small class="text-body-secondary">
+                            Atendimento em Libras
+                        </small>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- EMPRESA MOVE -->
+    <div class="card mb-3" style="max-width: 540px;">
+
+        <div class="row g-0">
+
+            <div class="col-md-4">
+
+              <span style="
+                    display: inline-block;
+                    width: 150px;
+                    height: 150px;
+                    background-color: rgb(36, 111, 252);
+                    border-radius: 50%;
+                    margin: 10px;">
+                </span>
+
+            </div>
+
+            <div class="col-md-8">
+
+                <div class="card-body">
+
+                    <h2 class="card-title">
+                        Empresa Move
+                    </h2>
+
+                    <p class="card-text">
+                        Produtora · Conteúdo acessível
+                    </p>
+
+                    <p class="card-text">
+                        <small class="text-body-secondary">
+                            Atendimento em Libras
+                        </small>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- BIBLIOTECA -->
+    <div class="card mb-3" style="max-width: 540px;">
+
+        <div class="row g-0">
+
+            <div class="col-md-4">
+
+                <span style="
+                    display: inline-block;
+                    width: 150px;
+                    height: 150px;
+                    background-color: rgb(255, 94, 0);
+                    border-radius: 50%;
+                    margin: 10px;">
+                </span>
+
+            </div>
+
+            <div class="col-md-8">
+
+                <div class="card-body">
+
+                    <h2 class="card-title">
+                        Biblioteca Municipal
+                    </h2>
+
+                    <p class="card-text">
+                        Serviço público · Intérprete disponível
+                    </p>
+
+                    <p class="card-text">
+
+                        <small class="text-body-secondary">
+                            Atendimento em Libras
+                        </small>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- POSTO DE SAÚDE -->
+    <div class="card mb-3" style="max-width: 540px;">
+
+        <div class="row g-0">
+
+            <div class="col-md-4">
+
+                <span style="
+                    display: inline-block;
+                    width: 150px;
+                    height: 150px;
+                    background-color: #f5c51a;
+                    border-radius: 50%;
+                    margin: 10px;">
+                </span>
+
+            </div>
+
+            <div class="col-md-8">
+
+                <div class="card-body">
+
+                    <h2 class="card-title">
+                        Posto de Saúde Vila Nova
+                    </h2>
+
+                    <p class="card-text">
+                        Saúde · Atendimento em Libras
+                    </p>
+
+                    <p class="card-text">
+
+                        <small class="text-body-secondary">
+                            Atendimento em Libras
+                        </small>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript do Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
+    <script>
+
+        // Cria o mapa em Caxias do Sul
+        var map = L.map('map').setView(
+            [-29.1685, -51.1794],
+            14
+        );
+
+
+        // Coloca o mapa do OpenStreetMap
+        L.tileLayer(
+            'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+            {
+                maxZoom: 19,
+                attribution: '&copy; OpenStreetMap'
+            }
+        ).addTo(map);
+
+
+        // SENAC
+ L.circleMarker([-29.1685, -51.1794], {
+    color: "#E41F92",
+    fillColor: "#E41F92",
+    fillOpacity: 1,
+    radius: 8
+})
+.addTo(map)
+.bindPopup(
+    "<b>Senac Unidade Centro</b><br>Atendimento em Libras"
+);
+
+        // EMPRESA MOVE
+        L.circleMarker([-29.1700, -51.1750], {
+    color: "#246FFC",
+    fillColor: "#246FFC",
+    fillOpacity: 1,
+    radius: 8
+})
+.addTo(map)
+.bindPopup(
+     "<b>Empresa Move</b><br>Conteúdo acessível"
+);
+
+
+        // BIBLIOTECA
+         L.circleMarker([-29.1650, -51.1800], {
+    color: "#FF5E00",
+    fillColor: "#FF5E00",
+    fillOpacity: 1,
+    radius: 8
+})
+.addTo(map)
+.bindPopup(
+     "<b>Biblioteca Municipal</b><br>Intérprete disponível"
+);
+
+
+        // POSTO DE SAÚDE
+               L.circleMarker([-29.1720, -51.1850], {
+    color: "#F5C51A",
+    fillColor: "#F5C51A",
+    fillOpacity: 1,
+    radius: 8
+})
+.addTo(map)
+.bindPopup(
+     "<b>Posto de Saúde Vila Nova</b><br>Atendimento em Libras"
+);
+
+    </script>
+
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
